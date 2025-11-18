@@ -1,0 +1,168 @@
+/* -------- HERO SECTION ---------- */
+.hero-container{
+    padding-right: 50px;
+    padding: 80px;
+    padding-left: 50px;
+    background: #000c1a;
+      min-height: 80vh;
+}
+.hero {
+  padding: 50px;
+  background: #000c1a;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 30px;
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* -------- TEXT -------- */
+
+.hero-content h3 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.dot {
+  color: #ff5c5c;
+  font-size: 40px;
+}
+
+.hero-content h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 10px 0;
+  position: relative;
+  padding-left: 70px
+}
+
+.hero-content h1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 70%;
+  width: 60px;
+  height: 2px;
+  background: #ff5c5c; /* line color */
+  transform: translateY(-50%);
+}
+
+.hero-content .role {
+  font-size: 40px;
+  font-weight: 800;
+  margin: 20px 0;
+}
+
+/* -------- BUTTONS -------- */
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 26px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn.primary {
+  background: transparent;
+  border: 2px solid #ff5c5c;
+  color: #ff5c5c;
+}
+
+.btn.primary:hover {
+  border: 2px solid #ff5c5c;
+  color: #fff;
+  background:#ff5c5c ;
+}
+
+/* -------- IMAGE + CIRCLE ---------- */
+
+.hero-image {
+  position: relative;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero-image img {
+  width: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+/* MAIN CIRCLE (center aligned always) */
+.circle-bg {
+  position: absolute;
+  bottom: -10px; /* bottom me perfect */
+  left: 0;
+  transform: translateX(-50%);
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* INNER RING */
+.circle-bg::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* OUTER RING */
+.circle-bg::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* -------- RESPONSIVE FIX -------- */
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 8%;
+    min-height: 70vh;
+  }
+
+  .hero-image {
+    width: 260px;
+  }
+
+  .circle-bg {
+    width: 240px;
+    height: 240px;
+    bottom: -5px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-content h3 {
+    font-size: 26px;
+  }
+  .hero-content h1 {
+    font-size: 32px;
+  }
+  .hero-content .role {
+    font-size: 34px;
+  }
+
+  .hero-image {
+    width: 220px;
+  }
+
+  .circle-bg {
+    width: 210px;
+    height: 210px;
+  }
+}
