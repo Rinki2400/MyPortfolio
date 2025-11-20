@@ -42,7 +42,7 @@
   width: 0;
   height: 2px;
   position: absolute;
-  background: white;
+  background: #ff5c5c;
   left: 0;
   bottom: -3px;
   transition: 0.3s;
