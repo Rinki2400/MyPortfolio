@@ -1,7 +1,7 @@
 .carousel {
   width: 100%;
   overflow: hidden;
-  background: #000c1a;
+  background: #14212c;
   padding: 30px 0;
   position: relative;
 }
@@ -11,10 +11,9 @@
   gap: 40px;
   width: max-content;
   animation: scroll 20s linear infinite;
-  will-change: transform; /* SUPER IMPORTANT — removes glitch */
+  will-change: transform;
 }
 
-/* Second copy controlled with same class */
 .carousel-track > .carousel-item {
   min-width: 120px;
   display: flex;
@@ -40,12 +39,76 @@ p {
   font-weight: 600;
 }
 
-/* Finally perfect infinite loop */
+/* Smooth infinite scroll */
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%); /* FIX: full track width scroll */
+    transform: translateX(-100%);
+  }
+}
+
+/* -------------------------------------------------------
+   RESPONSIVE DESIGN
+--------------------------------------------------------- */
+
+/* Tablets (max-width: 900px) */
+@media (max-width: 900px) {
+  .carousel-track {
+    gap: 28px;
+    animation: scroll 18s linear infinite;
+  }
+
+  .carousel-track > .carousel-item {
+    min-width: 100px;
+  }
+
+  .skill-icon {
+    font-size: 45px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+/* Mobile Large (max-width: 600px) */
+@media (max-width: 600px) {
+  .carousel-track {
+    gap: 24px;
+    animation: scroll 16s linear infinite;
+  }
+
+  .carousel-track > .carousel-item {
+    min-width: 80px;
+  }
+
+  .skill-icon {
+    font-size: 38px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+}
+
+/* Mobile Small (max-width: 400px) */
+@media (max-width: 400px) {
+  .carousel-track {
+    gap: 20px;
+    animation: scroll 14s linear infinite;
+  }
+
+  .carousel-track > .carousel-item {
+    min-width: 70px;
+  }
+
+  .skill-icon {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 12px;
   }
 }

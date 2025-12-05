@@ -1,0 +1,57 @@
+/* ===========================
+   FOOTER MAIN DESIGN
+=========================== */
+.portfolio-footer {
+  background: #0f1a23; 
+  color: #cbd5e1;
+  padding: 40px 0 18px;
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Name & Role */
+.footer-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+}
+
+.footer-sub {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 5px;
+  letter-spacing: 0.5px;
+}
+
+/* Social Icons */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 18px;
+  font-size: 20px;
+}
+
+.footer-socials a {
+  color: #cbd5e1;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #ff5c5c; /* Light Blue hover */
+  transform: translateY(-4px);
+}
+
+/* Bottom copyright */
+.footer-bottom {
+  margin-top: 22px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.footer-bottom span {
+  color: #ff5c5c;
+  font-weight: 500;
+}

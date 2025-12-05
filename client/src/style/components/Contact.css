@@ -1,0 +1,133 @@
+/* -------------------- CONTACT SECTION MAIN WRAPPER -------------------- */
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 70px 100px;
+  background: #14212c;   /* soft cream backdrop */
+  gap: 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* -------------------- LEFT TEXT CONTENT -------------------- */
+.contact-left {
+  width: 40%;
+}
+
+.contact-left h1 {
+  font-size: 55px;
+  font-weight: 600;
+  color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.contact-left h3 {
+  font-size: 21px;
+  font-weight: 500;
+  margin-top: 12px;
+  margin-bottom: 18px;
+  color: #edf2f8;
+}
+
+.contact-left p {
+  font-size: 18px;
+  color: #cfd8e3;
+  line-height: 1.6;
+}
+
+
+/* -------------------- RIGHT FORM AREA -------------------- */
+.contact-right {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-right label {
+  font-size: 17px;
+  margin-bottom: 6px;
+  color: #cfd8e3;
+
+}
+
+/* Input and Textarea Field UI */
+.contact-right input,
+.contact-right textarea {
+  width: 100%;
+  border: 1.6px solid #fda3a3;
+  background: transparent;
+  padding: 7px;
+  font-size: 16px;
+  border-radius: 4px;
+  outline: none;
+  margin-bottom: 22px;
+  transition: 0.3s ease;
+}
+
+/* On Focus */
+.contact-right input:focus,
+.contact-right textarea:focus {
+  border-color: #f74646;
+}
+
+/* Two side-by-side Inputs (First/Last Name) */
+.two-input {
+  display: flex;
+  gap: 20px;
+}
+
+
+/* -------------------- BUTTON -------------------- */
+.submit-btn {
+  padding: 13px 22px;
+  font-size: 17px;
+  border: none;
+  background: #f74646;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  width: fit-content;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #eb2626;
+  transform: translateY(-2px);
+}
+
+
+/* -------------------- RESPONSIVENESS -------------------- */
+@media (max-width: 900px) {
+  .contact-section {
+    flex-direction: column;
+    padding: 45px 45px;
+    align-items: center;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+  }
+
+  .contact-left h1 {
+    font-size: 42px;
+  }
+
+  .two-input {
+    flex-direction: column;
+  }
+}
+/* 👉 Placeholder Styling */
+.contact-right input::placeholder,
+.contact-right textarea::placeholder {
+  color: #fda3a3;         /* Light pinkish placeholder */
+  opacity: 0.8;
+  font-size: 15px;
+}
+
+/* 👉 When user types - Text color visible white */
+.contact-right input,
+.contact-right textarea {
+  color: #ffffff;        /* Text becomes white when typing */
+}

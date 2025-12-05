@@ -5,9 +5,8 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
   return (
-    <section className="hero-container">
-        <div className="hero">
-              {/* LEFT CONTENT */}
+    <section className="hero">
+      {/* LEFT CONTENT */}
       <motion.div
         className="hero-content"
         initial={{ opacity: 0, y: 30 }}
@@ -43,7 +42,7 @@ const Hero = () => {
               "Full Stack Developer",
               "MERN Stack Developer",
               "Web Developer",
-              "ReactJS Developer"
+              "ReactJS Developer",
             ]}
             loop={true}
             cursor
@@ -60,15 +59,15 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
           variants={{
-            visible: { transition: { staggerChildren: 0.2 } }
+            visible: { transition: { staggerChildren: 0.2 } },
           }}
         >
           <motion.a
-            href="#"
+            href="#projects"
             className="btn primary"
             variants={{
               hidden: { opacity: 0, y: 20 },
-              visible: { opacity: 1, y: 0 }
+              visible: { opacity: 1, y: 0 },
             }}
           >
             Got a project?
@@ -79,7 +78,7 @@ const Hero = () => {
             className="btn primary"
             variants={{
               hidden: { opacity: 0, y: 20 },
-              visible: { opacity: 1, y: 0 }
+              visible: { opacity: 1, y: 0 },
             }}
           >
             My resume
@@ -104,7 +103,6 @@ const Hero = () => {
           transition={{ delay: 0.7, duration: 0.8 }}
         />
       </motion.div>
-        </div>
     </section>
   );
 };
