@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import "../style/components/ProjectSection.css";
 import { motion } from "framer-motion";
@@ -55,13 +54,13 @@ const ProjectSection = () => {
 
   return (
     <section className="project-section">
-      
       {/* 🔥 Screen Reference Style Heading + Description */}
       <div className="project-header">
         <h2>Projects you'll love to explore.</h2>
         <p>
-          Each project is built with clean code, powerful backend, and modern UI.
-          Explore my featured work showcasing full-stack development skills and problem-solving.
+          Each project is built with clean code, powerful backend, and modern
+          UI. Explore my featured work showcasing full-stack development skills
+          and problem-solving.
         </p>
 
         <button className="see-all-top" onClick={() => setShowAll(!showAll)}>
@@ -97,18 +96,28 @@ const ProjectSection = () => {
 
               <div className="project-links">
                 {project.demo !== "#" && (
-                  <a href={project.demo} target="_blank">Live Demo</a>
+                  <a
+                    href="https://your-project-live-link.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Live Demo
+                  </a>
                 )}
-                <a href={project.github} target="_blank">GitHub</a>
+                <a
+                  href="https://github.com/username/project"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
               </div>
             </div>
           </motion.div>
         ))}
       </div>
-
     </section>
   );
 };
 
 export default ProjectSection;
-
