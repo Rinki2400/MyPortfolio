@@ -18,7 +18,7 @@ export default function AdminForm() {
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("role", "admin");
       // redirect to admin dashboard
-      window.location.href = "/dashboad"; // change route as per your page
+      window.location.href = "/dashboard"; // change route as per your page
     } catch (err) {
       alert(err.response?.data?.message || "Login Failed");
     }
