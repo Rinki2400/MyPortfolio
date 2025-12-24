@@ -13,6 +13,7 @@ connectDB();
 
 // Correct Route Mount 🔥
 app.use('/api/auth', require('./routes/authController'));
+app.use('/api/projects', require('./routes/projects'));
 
 app.listen(process.env.PORT || 5000, () =>
     console.log(`Server running on port ${process.env.PORT}`)

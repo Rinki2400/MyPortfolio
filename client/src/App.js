@@ -19,19 +19,8 @@ function App() {
 
         {/* Admin panel layout with nested routes */}
         <Route path="/dashboard" element={<AdminLayout />}>
-          {/* Default dashboard page */}
-          {/* <Route index element={<AdminHome />} /> */}
-
-          {/* Same as /dashboard/home */}
+          {/* Same as /dashboard/projects */}
           <Route path="projects" element={<Projects />} />
-
-          {/* About content form → /dashboard/form */}
-          {/* <Route path="form" element={<AboutForm />} /> */}
-
-          {/* Future routes:
-              <Route path="projects" element={<Projects />} />
-              <Route path="messages" element={<Messages />} />
-          */}
         </Route>
       </Routes>
     </BrowserRouter>

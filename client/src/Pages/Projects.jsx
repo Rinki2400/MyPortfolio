@@ -1,9 +1,19 @@
-import React from 'react'
+import ProjectForm from "../Pages/ProjectForm";
 
 function Projects() {
+  const handleProjectSubmit = (data) => {
+    console.log("New project:", data);
+    // yahin se API call / DB save kar sakti ho
+  };
+
   return (
-    <div>Projects</div>
-  )
+   <>
+      <h2 style={{ fontSize: "1.5rem", fontWeight: 600, marginBottom: "1rem" }}>
+        Projects
+      </h2>
+      <ProjectForm onSubmit={handleProjectSubmit} />
+    </>
+  );
 }
 
-export default Projects
+export default Projects;
